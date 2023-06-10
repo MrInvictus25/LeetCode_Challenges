@@ -37,7 +37,7 @@ class Solution:
                 total += digits[s[count+1]] - digits[s[count]]
                 count += 2
             # Else this is NOT the subtractive case.
-            elif count + 1 <= len(s) and s[count] != '':
+            elif count <= len(s) and s[count] != '':
                 total += digits[s[count]]
                 count += 1
             else:
