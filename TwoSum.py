@@ -23,16 +23,4 @@ example1 = Solution()
 print(example1.twoSum([0,2,6,5],8))
 
 
-# a = [2,4,7,1]
-# for i in range(len(a)):
-#     print(i)
-#     for j in range(len(a)):
-#         print(j)
-print(50 * '=')
-dicti = {}
-dicti[2] = 0
-dicti[3] = 2
-dicti[5] = 4
-b = dicti[5]
-print(b)
-print(dicti)
+
