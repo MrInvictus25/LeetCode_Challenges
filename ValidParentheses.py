@@ -22,7 +22,7 @@ class Solution:
                     upperElement = 'Empty'
 
                 if parentheses[element] != upperElement: # The checking if the opening bracket in the dictionary
-                                                         # and the upper element correspond each other
+                                                         # and the upper element corresponds each other
                     #print(parentheses[element])
                     #print(upperElement)
                     return False

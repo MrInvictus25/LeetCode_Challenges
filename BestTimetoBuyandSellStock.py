@@ -24,7 +24,7 @@ print(example.maxProfit([7, 1, 5, 3, 6, 4]))
 class Solution1:
     def maxProfit(self, prices: list[int]) -> int:
         maximum_profit = 0  # Keeping track of the largest difference
-        for purchaseDay in range(len(prices) - 1):  # Iteration through every day in prices
+        for purchaseDay in range(len(prices) - 1):  # Iteration through every day in prices. -1 means that we do not need the last digit
             for vendDay in range(purchaseDay + 1, len(prices)):  # Iteration through every day after purchaseDay
                 #print(vendDay)
                 #print(lst[vendDay])
