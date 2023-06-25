@@ -8,8 +8,14 @@ class Solution:
         revertedNumber = 0
         while x > revertedNumber:
             revertedNumber = revertedNumber * 10 + x % 10
+            print(revertedNumber)
             x //= 10
+            print(x)
         return x == revertedNumber or x == revertedNumber//10
 
 example = Solution()
 print(example.isPalindrome(1551))
+
+
+
+
