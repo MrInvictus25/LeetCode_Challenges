@@ -10,6 +10,9 @@ class Solution:
             xNext = coordinates[item][0] # Assigning a new variable to compare the slope
             yNext = coordinates[item][1]
 
+            # Since Delta of coordinates can be zero, in that case dividing by it would math error.
+            # It is necessary to convert division into multiplication to avoid the divide by zero issues.
+            # ΔY1 * ΔX2 = ΔY2 * ΔX1
             if yDelta * (xNext - coordinates[1][0]) != (yNext - coordinates[1][1]) * xDelta:
                 return False
 
