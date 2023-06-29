@@ -6,7 +6,7 @@ class Solution:
         readingIndex = len(nums)
 
         for i in range(1, readingIndex):  # To start with 0 element during founding the unique element.
-            if nums[i - 1] != nums[i]:
+            if nums[i - 1] != nums[i]:  # Otherwise, it will take the last element in an array
                 nums[writingIndex] = nums[i]
                 writingIndex += 1
         return writingIndex  # the number of unique elements in nums
