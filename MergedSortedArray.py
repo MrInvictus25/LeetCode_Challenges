@@ -18,9 +18,9 @@ class Solution:
         for WritePointer in range(n + m):  # The length of nums1 list
             if ReadPointer2 >= n or (ReadPointer1 < m and nums1Copy[ReadPointer1] <= nums2[ReadPointer2]):  # Reading values from nums1Copy
                 nums1[WritePointer] = nums1Copy[ReadPointer1]
-                print(nums1[WritePointer])
-                print('=' * 50)
-                print(nums1Copy[ReadPointer1])
+                #print(nums1[WritePointer])
+                #print('=' * 50)
+                #print(nums1Copy[ReadPointer1])
 
                 ReadPointer1 += 1
             else:
