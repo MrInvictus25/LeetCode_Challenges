@@ -16,14 +16,14 @@ class Solution:
         WritePointer = 0  # Initialization read pointer to the beginning of nums1
 
         for WritePointer in range(n + m):  # The length of nums1 list
-            print(WritePointer)
-            print('=' * 50)
+            #print(WritePointer)
+            #print('=' * 50)
             if ReadPointer2 >= n or (ReadPointer1 < m and nums1Copy[ReadPointer1] <= nums2[ReadPointer2]):  # Reading values from nums1Copy
                 nums1[WritePointer] = nums1Copy[ReadPointer1]  # The case when we keep element from the nums1 list
-                print('This is WritePointer: ', nums1[WritePointer])
-                print('=' * 50)
-                print('This is ReadPointer: ', nums1Copy[ReadPointer1])
-                print('=' * 50)
+                # print('This is WritePointer: ', nums1[WritePointer])
+                # print('=' * 50)
+                # print('This is ReadPointer: ', nums1Copy[ReadPointer1])
+                # print('=' * 50)
 
                 ReadPointer1 += 1
             else:
