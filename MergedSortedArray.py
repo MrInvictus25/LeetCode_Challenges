@@ -28,7 +28,7 @@ class Solution:
                 nums1[WritePointer] = nums2[ReadPointer2]
                 ReadPointer2 += 1
 
-            WritePointer += 1
+        WritePointer += 1
 
         return nums1
 
