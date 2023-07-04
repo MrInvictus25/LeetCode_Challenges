@@ -13,7 +13,7 @@ class Solution:
         # [1, 2, 3]
         ReadPointer1 = 0  # Initialization read pointer to the beginning of nums1Copy
         ReadPointer2 = 0  # Initialization read pointer to the beginning of nums2
-        WritePointer = 0  # Initialization read pointer to the beginning of nums1
+        WritePointer = 0  # Initialization writing pointer to the beginning of nums1
 
         for WritePointer in range(n + m):  # The length of nums1 list
             #print(WritePointer)
