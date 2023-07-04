@@ -13,12 +13,14 @@
 class Solution:
     def removeDuplicates(self, nums: list[int]) -> int:
 
+        # Two indexes approach. The first index updates the value in our input array while reading
+        # the data from the second index
 
         writingIndex = 1  # The first presence of an integer
         readingIndex = len(nums)
 
-        for i in range(1, readingIndex):  # To start with 0 element during founding the unique element.
-            if nums[i - 1] != nums[i]:  # Otherwise, it will take the last element in an array
+        for i in range(1, readingIndex):  # To start with 0 element during finding the unique element.
+            if nums[i - 1] != nums[i]:  # Finding different. Otherwise, it will take the last element in an array
                 nums[writingIndex] = nums[i]
                 writingIndex += 1
         return writingIndex  # the number of unique elements in nums
