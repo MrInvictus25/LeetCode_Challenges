@@ -36,7 +36,7 @@ class Solution:
         return s[firstIndex] == goal[secondIndex] and s[secondIndex] == goal[firstIndex]
 
 example = Solution()
-print(example.buddyStrings("aab", "ba"))
+print(example.buddyStrings("aab", "bab"))
 example1 = Solution()
 print(example1.buddyStrings("aa", "aa"))
 
