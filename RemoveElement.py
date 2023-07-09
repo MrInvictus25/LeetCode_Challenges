@@ -32,6 +32,23 @@ class Solution:
 example = Solution()
 print(example.removeElement([3,2,2,3], 3))
 
-example1 = Solution()
-print(example1.removeElement([0,1,2,2,3,0,4,2], 2))
+example2 = Solution()
+print(example2.removeElement([0,1,2,2,3,0,4,2], 2))
 
+# The Second solution
+class Solution1:
+    def removeElement(self, nums: list[int], val: int) -> int:
+
+        writingIndex = 1
+        readingIndex = len(nums)
+
+        for i in range(1, readingIndex):
+            if nums[i - 1] != nums[i]:
+                writingIndex += 1
+            return len(nums) - writingIndex
+
+example3 = Solution1()
+print(example3.removeElement([3,2,2,3], 3))
+
+example4 = Solution()
+print(example4.removeElement([0,1,2,2,3,0,4,2], 2))
