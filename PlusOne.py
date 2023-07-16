@@ -4,16 +4,7 @@
 
 # Increment the large integer by one and return the resulting array of digits.
 
-# Move along the input array starting from the end of array.
-#
-# Set all the nines at the end of array to zero.
-#
-# If we meet a not-nine digit, we would increase it by one. The job is done -
-# return digits.
-#
-# We're here because all the digits were equal to nine.
-# Now they have all been set to zero.
-# We then append the digit 1 in front of the other digits and return the result.
+
 class Solution:
     def plusOne(self, digits: list[int]) -> list[int]:
 
