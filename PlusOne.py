@@ -29,3 +29,6 @@ print(example1.plusOne([9]))
 
 example2 = Solution()
 print(example2.plusOne([9,9,9]))
+
+example3 = Solution()
+print(example3.plusOne([1,4,4]))
