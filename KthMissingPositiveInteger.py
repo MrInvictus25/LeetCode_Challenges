@@ -15,3 +15,6 @@ class Solution:
             k -= missingDigits
 
         return arr[-1] + k  # It is returned because the element to return is greater than the last element of the array
+
+example = Solution()
+print(example.findKthPositive([2,3,4,7,11], 5))
