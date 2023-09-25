@@ -6,10 +6,11 @@ class Solution:
             return k
         k -= arr[0] - 1 # Decreasing k by the number of positive integers which are missing before the
                         # array starts
-
+        #print(k)
         for element in range(len(arr) - 1):
+            #print('element', element)
             missingDigits = arr[element + 1] - arr[element] - 1  # Computation the number of missing positive integers in-between elements
-            # print(missingDigits)                             # [element + 1] and element
+            #print(missingDigits)                             # [element + 1] and element
             if k <= missingDigits: # It means the number to return is in-between arr[element + 1] and arr[element]
                 return arr[element] + k
             k -= missingDigits
@@ -18,3 +19,6 @@ class Solution:
 
 example = Solution()
 print(example.findKthPositive([2,3,4,7,11], 5))
+
+example1 = Solution()
+print(example.findKthPositive([2,3,4,7,11], 13))
