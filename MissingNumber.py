@@ -14,7 +14,7 @@ class Solution:
         elif nums[0] != 0:  # Checking that 0 is at the first index
             return 0
 
-        for i in range(1, len(nums)):  # Comparing sequentually each element with its index
+        for i in range(1, len(nums)):  # Comparing sequentially each element with its index
             # missingDigit = nums[i - 1] + 1
             if nums[i] != i:
                 return i
