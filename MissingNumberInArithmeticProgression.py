@@ -9,11 +9,11 @@ class Solution:
     def missingNumber(self, arr: list[int]) -> int:
 
         length = len(arr)
-        delta = (arr[-1] - arr[0]) // length
+        delta = (arr[-1] - arr[0]) // length # Receiving the value of difference using first and the last element
         # print(delta)
         expectedElement = arr[0]
 
-        for digit in arr:
+        for digit in arr: # Loop checks if the current value is equal to expected or not
             if digit != expectedElement:
                 return expectedElement
             else:
