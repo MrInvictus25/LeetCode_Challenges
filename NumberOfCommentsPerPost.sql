@@ -21,6 +21,7 @@
 -- The result format is in the following example.
 
 select post.sub_id as post_id, count(distinct number.sub_id) as number_of_comments
-from Submissions post left join Submissions number on (post.sub_id = number.parent_id)
+from Submissions post
+left join Submissions number on (post.sub_id = number.parent_id)
 where post.parent_id is NULL
 group by post.sub_id
