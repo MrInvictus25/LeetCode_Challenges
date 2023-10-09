@@ -8,7 +8,9 @@ class Solution:
         h = len(haystack)
 
         for first_occurence in range(h - n + 1):  # The starting index of the last substring
+            #print("first_occurence: ", first_occurence)
             for i in range(h):
+                #print(i)
                 if needle[i] != haystack[first_occurence + i]:
                     break
                 if i == n - 1:
