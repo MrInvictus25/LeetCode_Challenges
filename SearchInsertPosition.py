@@ -3,19 +3,19 @@
 # It is necessary to write an algorithm with O(log n) runtime complexity.
 class Solution:
     def searchInsert(self, nums: list[int], target: int) -> int:
-        leftPointer = 0
-        rightPointer = len(nums) - 1
+        leftPointer = 0  # (0)
+        rightPointer = len(nums) - 1  # (3)
 
         while leftPointer <= rightPointer:
-            middleElement = (leftPointer + rightPointer) // 2
-
-            if nums[middleElement] == target:
-                return middleElement
-            if target < nums[middleElement]:
-                rightPointer = middleElement - 1
+            middleIndex = (leftPointer + rightPointer) // 2  # (1)
+            print(middleIndex)
+            if nums[middleIndex] == target:
+                return middleIndex
+            if target < nums[middleIndex]:
+                rightPointer = middleIndex - 1
             else:
-                leftPointer = middleElement + 1
+                leftPointer = middleIndex + 1
         return leftPointer
 
 example = Solution()
-print(example.searchInsert([1,3,5,6], 5))
+print(example.searchInsert([1,3,5,6], 6))
