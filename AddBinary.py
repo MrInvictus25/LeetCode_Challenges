@@ -28,6 +28,7 @@ class Solution:
             # by 2 and then update the value of the carriage variable with the result.
             # During the loop, bits from the same position in a and b are added to carriage.
             # If carriage becomes 2 or greater, it indicates that a carry is needed to the next bit.
+            # If the condition is not met, it means no carry is generated for the current bit addition, so a '0' is appended to the result list.
 
         if carriage == 1:
             result.append('1')
