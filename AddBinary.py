@@ -7,23 +7,27 @@ class Solution:
             maxLength)  # The zfill() method adds zeros (0) at the beginning of the string, until it reaches the specified length
         b = b.zfill(maxLength)
 
-        carriage = 0  # This is a variable that keeps track of whether there is a carry when adding the corresponding bits of a and b.
+        carriage = 0
         result = []
 
-        for i in range(maxLength - 1, - 1, - 1):  # Iteration through opposite way
+        for i in range(maxLength - 1, -1, - 1):  # Iteration through opposite way
+            # print(i)
             if a[i] == '1':  # If number a has 1-bit in its lowest bit, we add 1 to the carriage
                 carriage += 1
             if b[i] == '1':  # If number a has 1-bit in its lowest bit, we add 1 to the carriage
                 carriage += 1
 
-            if carriage % 2 == 1:  # Appending the lowest bit of the carriage to the answer, and moving the highest bit of the carriage to the next order bit.
+            if carriage % 2 == 1:  # is checking if the rightmost bit of carriage is set to 1. If it's 1,
+                # it means that there is a carry to be propagated to the next bit.
+
                 result.append('1')
             else:
                 result.append('0')
-                # print('car: ', carriage)
-                # print('result: ', result)
 
-            carriage //= 2
+            carriage //= 2  # This line is used to perform integer division of the carriage variable
+            # by 2 and then update the value of the carriage variable with the result.
+            # During the loop, bits from the same position in a and b are added to carriage.
+            # If carriage becomes 2 or greater, it indicates that a carry is needed to the next bit.
 
         if carriage == 1:
             result.append('1')
@@ -38,5 +42,3 @@ print(example.addBinary('11', '1'))
 example1 = Solution()
 print(example1.addBinary('111', '10'))
 
-
-print(2//2)
