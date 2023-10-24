@@ -7,7 +7,7 @@ class Solution:
             maxLength)  # The zfill() method adds zeros (0) at the beginning of the string, until it reaches the specified length
         b = b.zfill(maxLength)
 
-        carriage = 0
+        carriage = 0  # This is a variable that keeps track of whether there is a carry when adding the corresponding bits of a and b.
         result = []
 
         for i in range(maxLength - 1, - 1, - 1):  # Iteration through opposite way
@@ -37,3 +37,6 @@ print(example.addBinary('11', '1'))
 
 example1 = Solution()
 print(example1.addBinary('111', '10'))
+
+
+print(2//2)
