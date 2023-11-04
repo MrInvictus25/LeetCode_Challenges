@@ -51,3 +51,4 @@ class Solution3:
                 return i
 example3 = Solution3()
 print(example3.singleNumber([4,1,2,1,2]))
+
