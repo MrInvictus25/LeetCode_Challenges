@@ -43,6 +43,7 @@ class Solution3:
     def singleNumber(self, nums: list[int]) -> int:
         dictDigit = defaultdict(int)  # defaultdict(int) initializes a defaultdict with a default
         # value of int(), which is 0.
+      
         for i in nums:
             dictDigit[i] += 1
             print(dictDigit)
