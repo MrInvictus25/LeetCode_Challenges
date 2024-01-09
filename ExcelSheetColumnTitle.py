@@ -9,7 +9,7 @@
 class Solution:
     def convertToTitle(self, columnNumber: int) -> str:
         result = []
-
+        # Each part will have an extra 1 added to compensate for the fact that we are starting from 1 in our system
         while columnNumber > 0:
             columnNumber -= 1 # It effectively maps the numeric value of the column to its corresponding letter representation.
             # By decrementing columnNumber before the conversion to a letter, it aligns the numeric
@@ -21,11 +21,14 @@ class Solution:
             #print("This is ord('A')", ord('A'))
             print("This is a letter", letter)
             result.append(letter)
+            print("This is a result", result)
             columnNumber //= 26 # By dividing it by 26 and updating the value of columnNumber for the next iteration of the loop.
-            print(columnNumber)
+            print("This is a columnNumber", columnNumber)
         return ''.join(reversed(result))
 
 example = Solution()
 print(example.convertToTitle(27))
 example1 = Solution()
 print(example1.convertToTitle(2023))
+
+

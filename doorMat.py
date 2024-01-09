@@ -5,7 +5,7 @@
 # The design pattern should only use |, . and - characters.
 class Solution():
     def doorMat(self, N: int, M: int):
-
+        # N, M = map(int, input().split())
         # print('This is N', N)
         # print('This is N', M)
 
@@ -26,3 +26,6 @@ class Solution():
         return ' '
 example = Solution()
 print(example.doorMat(7, 21))
+
+
+

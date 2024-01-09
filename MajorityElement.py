@@ -44,28 +44,49 @@ print(example.majorityElement([3,1,3]))
 class Solution3:
     def majorityElement(self, nums):#, leftPos = 0, rightPos = None):
         def majority_element(leftPos, rightPos):
+            print("this is lefPos", leftPos)
+            print("this is rightPos", rightPos)
             if leftPos == rightPos:  # this is case if the only element in an array of size 1
+                print("this is lefPos if True", leftPos)
+                print("this is rightPos if True", rightPos)
                 # is the majority element
+                print("this is nums[leftPos]", nums[leftPos])
                 return nums[leftPos]
 
             middlePos = (rightPos - leftPos) // 2 + leftPos  # Recurse on left and right halves of the slice
             print("This is middlePos: ", middlePos)
-            left = majority_element(leftPos, middlePos)
-            right = majority_element(middlePos + 1, rightPos)
+            left = majority_element(leftPos, middlePos) # leftPos = 0  middlePos(rightPos) = 1; leftPos = 0  middlePos(rightPos) = 0;
+            #right = majority_element(middlePos + 1, rightPos) # middlePos = 1 rightPos = 2;
 
             # if the two halves agree on the majority element, return it.
-            if left == right:
-                return left
-
-            # otherwise, count each element and return the "winner".
-            left_count = sum(1 for i in range(leftPos, rightPos + 1) if nums[i] == left)
-            right_count = sum(1 for i in range(leftPos, rightPos + 1) if nums[i] == right)
-            print("This is left_count: ", left_count)
-            print("This is right_count: ", right_count)
-            return left if left_count > right_count else right
+            # print(left == right)
+            # if left == right:
+            #     return left
+            # print(left, "  ", right)
+            # # otherwise, count each element and return the "winner".
+            # left_count = sum(1 for i in range(leftPos, rightPos + 1) if nums[i] == left)
+            # right_count = sum(1 for i in range(leftPos, rightPos + 1) if nums[i] == right)
+            # print("This is left_count: ", left_count)
+            # print("This is right_count: ", right_count)
+            # return left if left_count > right_count else right
 
         return majority_element(0, len(nums) - 1)
 
 example3 = Solution3()
 print("This is the third approach")
 print(example3.majorityElement([3,1,3]))
+
+def add(a, b):
+    c = a + b
+    return c
+
+def hello():
+    def sub(a, b):
+        middlePos = (b - a) // 2 + a
+        print("this is a: ", a)
+        print("this is b: ", b)
+        print("this is middlePos: ", middlePos)
+        right = sub(a , middlePos)
+    return sub(0, 2)
+
+print(hello())
