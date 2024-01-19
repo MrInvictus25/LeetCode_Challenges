@@ -12,8 +12,9 @@ class Solution:
             integerThird = integerFirst + integerSecond
             integerFirst = integerSecond
             integerSecond = integerThird
-
+        #print(integerSecond)
         return integerSecond
 
 example = Solution()
 print(example.climbStairs(5))
+#example.climbStairs(5)

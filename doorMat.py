@@ -7,7 +7,7 @@ class Solution():
     def doorMat(self, N: int, M: int):
         # N, M = map(int, input().split())
         # print('This is N', N)
-        # print('This is N', M)
+        # print('This is N', M)gggfgfgfgggfgfgg
 
         # Drawing the top part
         for i in range(N // 2):
