@@ -52,5 +52,4 @@ display_linked_list(linked_list)
 
 print("Output linked list after removal:")
 display_linked_list(result)
-# example = Solution()
-# print(example.removeElements([1,2,6,3,4,5,6], 6))
+
