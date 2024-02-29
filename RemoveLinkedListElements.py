@@ -40,7 +40,7 @@ def display_linked_list(head):
         current = current.next
     print("None")
 
-# Example usage:
+# Example
 input_values = [1, 2, 6, 3, 4, 5, 6]
 linked_list = create_linked_list(input_values)
 
