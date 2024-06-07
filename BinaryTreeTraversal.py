@@ -1,3 +1,11 @@
+# Given the root of a binary tree, return the inorder traversal of its nodes' values.
+# Traversal: Visiting all the nodes in a specific order.
+# In an inorder traversal, the nodes are visited in the following order:
+# Traverse the left subtree.
+# Visit the root node.
+# Traverse the right subtree.
+
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -11,6 +19,7 @@ node2 = TreeNode(2)
 node3 = TreeNode(3)
 node4 = TreeNode(4)
 node5 = TreeNode(5)
+
 
 ## Example 2
 root1 = TreeNode(1)
@@ -29,18 +38,26 @@ node2.right = node5
 root1.left = node2_2
 root1.right = node3_3
 node3_3.left = node4_4
+
+print(root.val)
+
 class Solution:
-    def inorderTraversal(self, root) -> list[int]:
+    def inorderTraversal(self, input) -> list[int]:
         result = []
-        stack = []
-        current = root
+        stack = []  #  Stack is an empty list used to keep track of nodes
+        current = input # Setting current to the root node.
+        #print(current.val)
+
         while current or stack:
             while current:
                 stack.append(current)
-                current = current.left
+                current = current.left # Moving from current to current.left (node 2 and so on).
+
             current = stack.pop()
             result.append(current.val)
-            current = current.right
+            #print(current.val)
+            current = current.right # Updating the current pointer to the right child of the popped node
+            #print(result)
         return result
 
 
