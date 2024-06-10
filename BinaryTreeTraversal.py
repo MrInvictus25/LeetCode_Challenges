@@ -39,7 +39,7 @@ root1.left = node2_2
 root1.right = node3_3
 node3_3.left = node4_4
 
-print(root.val)
+#print(root.val)
 
 class Solution:
     def inorderTraversal(self, input) -> list[int]:
@@ -50,12 +50,14 @@ class Solution:
 
         while current or stack:
             while current:
-                stack.append(current)
+                #print(current.val)
+                stack.append(current) # This line is used to keep track of the nodes I need to process later
                 current = current.left # Moving from current to current.left (node 2 and so on).
+                #print("left side: ", current.val)
 
             current = stack.pop()
-            result.append(current.val)
             #print(current.val)
+            result.append(current.val)
             current = current.right # Updating the current pointer to the right child of the popped node
             #print(result)
         return result
