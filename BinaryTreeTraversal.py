@@ -42,10 +42,10 @@ node3_3.left = node4_4
 #print(root.val)
 
 class Solution:
-    def inorderTraversal(self, input) -> list[int]:
+    def inorderTraversal(self, root) -> list[int]:
         result = []
         stack = []  #  Stack is an empty list used to keep track of nodes
-        current = input # Setting current to the root node.
+        current = root # Setting current to the root node.
         #print(current.val)
 
         while current or stack:
