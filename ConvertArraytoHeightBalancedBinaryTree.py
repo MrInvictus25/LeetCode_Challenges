@@ -35,17 +35,17 @@ class Solution:
 if __name__ == "__main__":
     nums = [-10, -3, 0, 5, 9]
     solution = Solution()
-    bst_root = solution.sortedArrayToBST(nums)
+    bstRoot = solution.sortedArrayToBST(nums)
 
 
     # Function to print the tree in pre-order traversal
-    def pre_order(node):
+    def preOrder(node):
         if not node:
             return
         print(node.val, end=' ')
-        pre_order(node.left)
-        pre_order(node.right)
+        preOrder(node.left)
+        preOrder(node.right)
 
 
-    pre_order(bst_root)
+    preOrder(bstRoot)
 
