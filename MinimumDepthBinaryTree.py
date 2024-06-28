@@ -17,7 +17,7 @@ class Solution:
         of the container, as deque provides an O(1) time complexity for append and pop operations as compared to a list 
         that provides O(n) time complexity.
         """
-        container = collections.deque([root]) # A queue q (using collections.deque) is initialized with the root node.
+        container = collections.deque([root]) # A queue container (using collections.deque) is initialized with the root node.
         depth = 1
         while container:
             numberNodes = len(container) # numberNodes is set to the number of nodes at the current depth level.
