@@ -52,3 +52,4 @@ example = Solution()
 print(example.minDepth(root))
 
 
+
