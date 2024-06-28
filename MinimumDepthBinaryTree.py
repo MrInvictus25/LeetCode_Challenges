@@ -22,7 +22,7 @@ class Solution:
         while container:
             numberNodes = len(container) # numberNodes is set to the number of nodes at the current depth level.
             for number in range(numberNodes): # Iterating over all nodes at the current depth level.
-                node = numberNodes.popleft()
+                node = container.popleft()
                 if not node: # If the node is None, skip it.
                     continue
                 # The first leaf would be at minimum depth, hence return it.
