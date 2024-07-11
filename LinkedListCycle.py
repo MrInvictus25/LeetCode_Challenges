@@ -59,11 +59,11 @@ def create_cycle(head, pos):
 
     while current.next:
         if index == pos:
-            cycle_entry = current
+            cycleEntry = current
         current = current.next
         index += 1
 
-    current.next = cycle_entry # Setting the next pointer of the last node to cycle_entry, creating a cycle.
+    current.next = cycleEntry # Setting the next pointer of the last node to cycle_entry, creating a cycle.
 
     return head
 
