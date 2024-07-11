@@ -27,7 +27,7 @@ class Solution:
             node, currSum = stack.pop()
             if not node.left and not node.right and currSum == 0:
                 return True
-            #  if you append the right child first and then the left child, the left child will be processed before the
+            #  if I append the right child first and then the left child, the left child will be processed before the
             #  right child because the stack is a Last-In-First-Out (LIFO) data structure.
 
             if node.right: # Checks if the current node has a right child.
