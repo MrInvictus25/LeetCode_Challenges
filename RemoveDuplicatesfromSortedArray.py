@@ -2,12 +2,6 @@
 # element appears only once. The relative order of the elements should be kept the same.
 # Then return the number of unique elements in nums.
 
-# Consider the number of unique elements of nums to be k, to get accepted, you need to do the
-# following things:
-
-# Change the array nums such that the first k elements of nums contain the unique elements in the
-# order they were present in nums initially. The remaining elements of nums are not important as well as
-# the size of nums.
 # Return k.
 
 class Solution:
@@ -18,11 +12,13 @@ class Solution:
 
         writingIndex = 1  # The first presence of an integer
         readingIndex = len(nums)
-
+        test = []
         for i in range(1, readingIndex):  # To start with 0 element during finding the unique element.
             if nums[i - 1] != nums[i]:  # Finding different. Otherwise, it will take the last element in an array
                 nums[writingIndex] = nums[i]
                 writingIndex += 1
+                #test.append(nums[i])
+                #print(test)
         return writingIndex  # the number of unique elements in nums
 
 example = Solution()
